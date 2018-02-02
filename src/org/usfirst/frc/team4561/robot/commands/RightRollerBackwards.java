@@ -18,7 +18,7 @@ public class RightRollerBackwards extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	setTimeout(.125);
+    	setTimeout(.25); //.125
     }
 
     // Called repeatedly when this Command is scheduled to run

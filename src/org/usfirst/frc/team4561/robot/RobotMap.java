@@ -28,8 +28,8 @@ public class RobotMap {
 	// public static int rightMotor = 2;
 	
 	//Left Motor Ports
-	public static final int FRONT_LEFT_MOTOR_PORT = 7;
-	public static final int MID_LEFT_MOTOR_PORT = 8;
+	public static final int FRONT_LEFT_MOTOR_PORT = 1;
+	public static final int MID_LEFT_MOTOR_PORT = 2;
 	public static final int BACK_LEFT_MOTOR_PORT = 3;
 	
 	//Right Motor Ports
@@ -37,8 +37,8 @@ public class RobotMap {
 	public static final int MID_RIGHT_MOTOR_PORT = 5;
 	public static final int BACK_RIGHT_MOTOR_PORT = 6;
 	
-	public static final int LEFT_ROLLER_PORT = 2;
-	public static final int RIGHT_ROLLER_PORT = 1;
+	public static final int LEFT_ROLLER_PORT = 7;
+	public static final int RIGHT_ROLLER_PORT = 8;
 	
 	//Transmission Motor Ports
 	public static final int TRANSMISSION_SPEED_BUTTON = 6;
@@ -50,10 +50,11 @@ public class RobotMap {
 	public static final int RIGHT_ROLLER_BACKWARDS_BUTTON = 4;
 	public static final int LEFT_ROLLER_BACKWARDS_BUTTON = 6;
 	
-	public static final int STOP_ROLLERS_BUTTON = 2;
+	public static final int TOURING_BUTTON = 2;
 	
+	public static boolean TOURING_MODE = false;
 	//Drive Mode 
-	public static final int DRIVE_MODE = 0; // 1 is arcade drive, 0 is tank drive
+	public static final int DRIVE_MODE = 1; // 1 is arcade drive, 0 is tank drive
 
 	// If you are using multiple modules, make sure to define both the port
 	// number and the module. For example you with a rangefinder:

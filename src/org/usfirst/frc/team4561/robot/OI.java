@@ -22,6 +22,7 @@ public class OI {
 	private static JoystickButton release = new JoystickButton(rightStick, RobotMap.RELEASE_BUTTON);
 	private static JoystickButton rightIntake = new JoystickButton(rightStick, RobotMap.RIGHT_ROLLER_BACKWARDS_BUTTON);
 	private static JoystickButton leftIntake = new JoystickButton(rightStick, RobotMap.LEFT_ROLLER_BACKWARDS_BUTTON);
+	private static JoystickButton touring = new JoystickButton(rightStick, RobotMap.TOURING_BUTTON);
 
 	public double getRightStickY() {
 		
@@ -60,6 +61,10 @@ public double getLeftStickX() {
 	release.whileHeld(new RELEASE());
 	rightIntake.whileHeld(new RightRollerBackwards2());
 	leftIntake.whileHeld(new LeftRollerBackwards2());
+	}
+	
+	public void touring(){
+		touring.whenPressed(new TouringMode());
 	}
 	
 	

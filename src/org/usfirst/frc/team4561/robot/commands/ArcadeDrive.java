@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4561.robot.commands;
 
 import org.usfirst.frc.team4561.robot.Robot;
+import org.usfirst.frc.team4561.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -11,7 +12,12 @@ public class ArcadeDrive extends Command {
 	}
 	
 	protected void execute() {
-		Robot.DriveTrain.arcadeDrive(Robot.m_oi.getLeftStickX(), Robot.m_oi.getRightStickY());
+		if(RobotMap.TOURING_MODE == true){
+			Robot.DriveTrain.arcadeDrive(Robot.m_oi.getLeftStickX()*.5, Robot.m_oi.getRightStickY()*.5);
+		}
+		else{
+			Robot.DriveTrain.arcadeDrive(Robot.m_oi.getRightStickY(), Robot.m_oi.getLeftStickX());
+		}
 	}	  
 	  
 	protected void initialize() {}

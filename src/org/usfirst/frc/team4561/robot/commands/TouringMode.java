@@ -1,18 +1,18 @@
 package org.usfirst.frc.team4561.robot.commands;
 
 import org.usfirst.frc.team4561.robot.Robot;
+import org.usfirst.frc.team4561.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class StopRightRoller extends Command {
+public class TouringMode extends Command {
 
-    public StopRightRoller() {
+    public TouringMode() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires(Robot.LeftRoller);
     }
 
     // Called just before this Command runs the first time
@@ -21,7 +21,7 @@ public class StopRightRoller extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.LeftRoller.setMotorPower(0);
+    	RobotMap.TOURING_MODE = true;
     }
 
     // Make this return true when this Command no longer needs to run execute()

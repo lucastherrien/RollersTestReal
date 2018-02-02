@@ -26,6 +26,7 @@ public class Robot extends TimedRobot {
 	public static final DriveTrain DriveTrain = new DriveTrain();
 	public static final LeftRoller LeftRoller = new LeftRoller();
 	public static final RightRoller RightRoller = new RightRoller();
+	public static final Transmission Transmission = new Transmission();
 	public static OI m_oi;
 
 	Command m_autonomousCommand;
