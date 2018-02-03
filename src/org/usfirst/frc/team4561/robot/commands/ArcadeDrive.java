@@ -13,10 +13,10 @@ public class ArcadeDrive extends Command {
 	
 	protected void execute() {
 		if(RobotMap.TOURING_MODE == true){
-			Robot.DriveTrain.arcadeDrive(Robot.m_oi.getLeftStickX()*.5, Robot.m_oi.getRightStickY()*.5);
+			Robot.DriveTrain.arcadeDrive(Robot.oi.getLeftStickX()*.5, Robot.oi.getRightStickY()*.5);
 		}
 		else{
-			Robot.DriveTrain.arcadeDrive(Robot.m_oi.getRightStickY(), Robot.m_oi.getLeftStickX());
+			Robot.DriveTrain.arcadeDrive(Robot.oi.getRightStickY(), Robot.oi.getLeftStickX());
 		}
 	}	  
 	  

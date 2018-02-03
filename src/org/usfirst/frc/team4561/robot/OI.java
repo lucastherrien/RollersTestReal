@@ -23,6 +23,15 @@ public class OI {
 	private static JoystickButton rightIntake = new JoystickButton(rightStick, RobotMap.RIGHT_ROLLER_BACKWARDS_BUTTON);
 	private static JoystickButton leftIntake = new JoystickButton(rightStick, RobotMap.LEFT_ROLLER_BACKWARDS_BUTTON);
 	private static JoystickButton touring = new JoystickButton(rightStick, RobotMap.TOURING_BUTTON);
+	
+	public OI() {
+		intake.whileHeld(new SquareWaveRollerControl());
+		release.whileHeld(new RELEASE());
+		rightIntake.whileHeld(new RightRollerBackwards2());
+		leftIntake.whileHeld(new LeftRollerBackwards2());
+		touring.whenPressed(new TouringMode());
+		}
+
 
 	public double getRightStickY() {
 		
@@ -56,18 +65,6 @@ public double getLeftStickX() {
 		
 	}
 
-	public void matchMode() {
-	intake.whileHeld(new SquareWaveRollerControl());
-	release.whileHeld(new RELEASE());
-	rightIntake.whileHeld(new RightRollerBackwards2());
-	leftIntake.whileHeld(new LeftRollerBackwards2());
-	}
-	
-	public void touring(){
-		touring.whenPressed(new TouringMode());
-	}
-	
-	
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.

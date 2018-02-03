@@ -16,7 +16,7 @@ public class TankDrive extends Command {
 	}
 	
 	protected void execute(){
-		Robot.DriveTrain.tankDrive(Robot.m_oi.getLeftStickY(), Robot.m_oi.getRightStickY());
+		Robot.DriveTrain.tankDrive(Robot.oi.getLeftStickY(), Robot.oi.getRightStickY());
 	}
 	
 	protected void stop(){
