@@ -30,7 +30,7 @@ public class OI {
 		rightIntake.whileHeld(new RightRollerBackwards2());
 		leftIntake.whileHeld(new LeftRollerBackwards2());
 		touring.whenPressed(new TouringMode());
-		}
+	}
 
 
 	public double getRightStickY() {
